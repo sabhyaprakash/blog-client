@@ -60,7 +60,7 @@ top: 0,
 
              
          <img
-                    src={`/Images/${details.thumbnail}`}
+                    src={details.thumbnail}
                     style={{
                       borderRadius: "24px 24px 24px 24px",
                       height: "40vh",

@@ -17,13 +17,11 @@ function BlogForm() {
       data.append("file", myFile);
       data.append("upload_preset", "hpixc0wx")
       Axios.post("https://api.cloudinary.com/v1_1/sabhya/image/upload", data ).then((response)=>{
-        data.append("title", title);
-        data.append("content", content);
-        data.append("category", category);
-        data.append("imgurl", response.data.url);
+  
+       
 
-        Axios.post("https://blog-projectly.herokuapp.com/addblog",
-        data
+        Axios.post("http://localhost:3001/addblog",
+        {content: content, title: title, category: category, imgurl: response.data.url}
         , {
             headers: {
                 accessToken: localStorage.getItem("accessToken"),

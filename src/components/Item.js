@@ -67,7 +67,7 @@ export default function Item() {
               <div className="row">
                 <div className="col-md-3">
                   <img
-                         src={`/Images/${post.thumbnail}`}
+                         src={post.thumbnail}
                     style={{
                       borderRadius: "24px 0px 0px 24px",
                   height: '20vh',
