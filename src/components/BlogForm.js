@@ -20,7 +20,7 @@ function BlogForm() {
   
        
 
-        Axios.post("http://localhost:3001/addblog",
+        Axios.post("https://blog-projectly.herokuapp.com/addblog",
         {content: content, title: title, category: category, imgurl: response.data.url}
         , {
             headers: {
