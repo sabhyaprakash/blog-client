@@ -17,7 +17,8 @@ function BlogForm() {
       data.append("content", content);
       data.append("category", category);
       data.append("myfile", myFile);
-      
+      data.append("upload_preset", "hpixc0wx");
+      Axios.post("https://api.cloudinary.com/v1_1/sabhya/image/upload").then(()=>{
         Axios.post("https://blog-projectly.herokuapp.com/addblog",
         data
         , {
@@ -32,6 +33,9 @@ function BlogForm() {
            
             }
         })
+
+      })
+     
 
 
 
