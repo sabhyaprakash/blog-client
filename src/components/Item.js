@@ -31,7 +31,7 @@ export default function Item() {
   top: 0,
           }}
         >
-          trending...
+          trending........
         </h1>
 
          
