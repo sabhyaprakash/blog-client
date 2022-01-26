@@ -18,7 +18,7 @@ function BlogForm() {
       data.append("category", category);
       data.append("myfile", myFile);
       
-        Axios.post("http://localhost:3001/addblog",
+        Axios.post("https://blog-projectly.herokuapp.com/addblog",
         data
         , {
             headers: {

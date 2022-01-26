@@ -14,7 +14,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   const onClickHandler = () => {
-    Axios.post("http://localhost:3001/login", {
+    Axios.post("https://blog-projectly.herokuapp.com/login", {
       username: username,
       password: password
     }).then(response => {

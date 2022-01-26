@@ -13,7 +13,7 @@ export default function DetailView({match}) {
 
 
     useEffect(() => {
-        Axios.get(`http://localhost:3001/post/${id}`).then((response) => {
+        Axios.get(`https://blog-projectly.herokuapp.com/post/${id}`).then((response) => {
     
         console.log(response)
         setDetails(response.data);

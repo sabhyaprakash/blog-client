@@ -8,7 +8,7 @@ export default function Item() {
   let history = useHistory();
   const [allPosts, setAllPosts] = useState([]);
   useEffect(() => {
-    Axios.get("http://localhost:3001/allblogs").then((response) => {
+    Axios.get("https://blog-projectly.herokuapp.com/allblogs").then((response) => {
       console.log(response);
       setAllPosts(response.data.reverse());
       

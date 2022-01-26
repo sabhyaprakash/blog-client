@@ -15,7 +15,7 @@ import DetailView from "./components/DetailView";
 function App() {
   const dispatch = useDispatch();
   useEffect(()=> {
-    Axios.get("http://localhost:3001/auth", {
+    Axios.get("https://blog-projectly.herokuapp.com/auth", {
       headers :{
         accessToken : localStorage.getItem('accessToken')
       }

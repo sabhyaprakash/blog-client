@@ -13,7 +13,7 @@ export default function Register() {
 
 
   const onClickHandler = () => {
-    Axios.post("http://localhost:3001/register", {username: username, email: email, password: password}).then((response)=>{
+    Axios.post("https://blog-projectly.herokuapp.com/register", {username: username, email: email, password: password}).then((response)=>{
       console.log(response);
 
     })
