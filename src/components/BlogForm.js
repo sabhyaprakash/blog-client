@@ -13,11 +13,15 @@ function BlogForm() {
 
     const submitBlog = () => {
       const data = new FormData();
-      data.append("title", title);
-      data.append("content", content);
-      data.append("category", category);
-      data.append("myfile", myFile);
-      
+ 
+      data.append("file", myFile);
+      data.append("upload_preset", "hpixc0wx")
+      Axios.post("https://api.cloudinary.com/v1_1/sabhya/image/upload", data ).then((response)=>{
+        data.append("title", title);
+        data.append("content", content);
+        data.append("category", category);
+        data.append("imgurl", response.data.url);
+
         Axios.post("https://blog-projectly.herokuapp.com/addblog",
         data
         , {
@@ -33,6 +37,8 @@ function BlogForm() {
             }
         })
 
+
+      })
 
 
     }
