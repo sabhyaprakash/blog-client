@@ -70,7 +70,7 @@ export default function Item() {
                          src={post.thumbnail}
                     style={{
                       borderRadius: "24px 0px 0px 24px",
-                  height: '20vh',
+                  height: '23vh',
                   width: '100%'
                    
               
@@ -92,9 +92,19 @@ export default function Item() {
                     </h5>
   <br/><br/>
                     <p className="card-text">
-                      <small className="text-muted">
+                      <div class="row">
+                        <div class="col-md-11">
+                        <small className="text-muted">
                         Published on {post.date}
                       </small>
+                          </div>
+                          <div class="col-md-1">
+                          <small className="text-muted">
+                         {post.category}
+                      </small>
+                            </div>
+                            </div>
+                    
                     </p>
                   </div>
                 </div>
