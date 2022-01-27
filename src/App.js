@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
 import { login } from "./features/user";
 import BlogForm from "./components/BlogForm";
 import DetailView from "./components/DetailView";
+import Alert from "./components/Alert";
 
 function App() {
   const dispatch = useDispatch();
@@ -43,6 +44,7 @@ function App() {
               <div className="col-md-1" style={{ marginTop: "10vh" }}></div>
               <div className="col-md-10" style={{ marginTop: "11vh" }}>
                 <Item></Item>
+           
               </div>
               <div className="col-md-1" style={{ marginTop: "10vh" }}></div>
             </div>

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Link } from 'react-router-dom';
 import Axios from "axios";
+import Alert from "./Alert.js";
 
 
 
@@ -8,6 +9,7 @@ export default function Register() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
+  const [alert, setAlert] = useState(false);
 
 
 
@@ -15,12 +17,21 @@ export default function Register() {
   const onClickHandler = () => {
     Axios.post("https://blog-projectly.herokuapp.com/register", {username: username, email: email, password: password}).then((response)=>{
       console.log(response);
+      setAlert(true);
 
+   
     })
   }
     return (
         <div>
             <>
+            {alert?
+             <Alert message="Account Created Successfully!"></Alert>
+             
+          :
+          ""
+          }
+           
             <div
           className="card mb-3 hover shadow-lg p-3 mb-5 bg-white rounded"
           style={{

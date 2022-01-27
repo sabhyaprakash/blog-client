@@ -106,12 +106,12 @@ top: 0,
 <br/><br/>
               <p className="card-text">
                 <div class="row">
-                  <div class="col-md-11">
+                  <div class="col-md-10">
                   <small className="text-muted">
                   Published on {post.date}
                 </small>
                     </div>
-                    <div class="col-md-1">
+                    <div class="col-md-2">
                     <small className="text-muted">
                    {post.category}
                 </small>

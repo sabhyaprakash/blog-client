@@ -1,15 +1,17 @@
 import React, {useState} from 'react';
 import Axios from "axios";
+import Alert from "./Alert.js";
 
 
 function BlogForm() {
-
+  const [alert, setAlert] = useState(false);
 
 
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
     const [category, setCategory] = useState("Experiences");
     const [myFile, setMyFile] = useState();
+
 
     const submitBlog = () => {
       const data = new FormData();
@@ -29,6 +31,8 @@ function BlogForm() {
         }).then((response) => {
             if(response.data.successStatus){
                 console.log("success")
+                setAlert(true);
+
             }
             else{
            
@@ -42,6 +46,7 @@ function BlogForm() {
     }
     return (
         <div>
+         
               <h1
           style={{
             fontFamily: "Dongle , sans-serif",
@@ -94,9 +99,16 @@ function BlogForm() {
   <label htmlFor="exampleFormControlTextarea1" className="form-label"><h5>Content</h5></label>
   <textarea className="form-control" value={content} onChange={(e)=> setContent(e.target.value)} id="exampleFormControlTextarea1" placeholder="Content goes here..." rows="20"></textarea>
 </div>
+<center>
 <button className="btn btn-primary" onClick={submitBlog}>Submit Post</button>
+</center>
+
 
         </div>
+        {alert?
+            <Alert message="Blog Created Successfully!"></Alert> :
+          ""}
+           
         </div>
     )
 }
