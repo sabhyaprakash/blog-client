@@ -8,7 +8,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 
 
 
-export default function DetailView({match}) {
+export default function DetailView() {
     let {id} = useParams();
     const [details, setDetails] = useState({});
     const [loading, setLoading] = useState(false);

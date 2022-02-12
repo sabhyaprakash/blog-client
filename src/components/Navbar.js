@@ -106,7 +106,7 @@ export default function Navbar() {
           </div>
           <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
             <ul className="navbar-nav ms-auto">
-            {user.loggedin? <li className="nav-item">
+            {user.loggedin && user.name==="kitti" ? <li className="nav-item">
                 <Link
                   className="nav-link"
                   to="/addblog"
